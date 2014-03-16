@@ -1,0 +1,157 @@
+/*
+*************************************************
+
+PROJECT HUB
+General Screen Styles
+
+Created by the epic SuperFriendly team.
+http://superfriend.ly/
+
+*************************************************
+*/
+
+
+/*-------------------------------------------    
+    Fonts     
+-------------------------------------------*/
+
+
+
+/*-------------------------------------------    
+    Flag
+	(Thanks Jeremy: http://adactio.com/journal/5429/)
+-------------------------------------------*/
+body:after { content: 'mini'; display: none; }
+
+
+
+/*-------------------------------------------    
+    Base     
+-------------------------------------------*/
+* { margin: 0; padding: 0; }
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+html { font-size: 62.5%; } /* for rems */
+body { font-family: 'Karla', Helvetica, Arial, sans-serif; color: #333; }
+
+
+/* block level */
+
+h1, .h1 { font: bold 4.2rem 'Karla', Helvetica, Arial, sans-serif; margin: 0 0 0.5em; }
+h2, .h2 { font: bold 1.8rem 'Karla', Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+h3, .h3 { font: bold 1.5rem 'Karla', Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+h4, h5, h6, .h4, .h5, .h6 { font: bold 1.2rem 'Karla', Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+
+p, ul, dl, ol, table { font-size: 1.6rem; margin: 0 0 1.5em; color: #777; }
+ul { margin-left: 20px; font-size: 1.4rem; }
+li { margin: 0 0 0.3em; }
+
+form { margin: 0 0 1.5em; }
+
+/* inline */
+
+label { font-size: 1.6rem; }
+input, select, textarea {  }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { }
+input.empty::-webkit-input-placeholder, textarea.empty::-webkit-input-placeholder { color: red; }
+input.empty:-moz-placeholder, textarea.empty:-moz-placeholder { color: red; }
+.error { color: red; }
+
+table { }
+    td { padding: 0.25em 1em; border-top: 1px solid #aaa; }
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+mark { background: none; font-style: normal; }
+
+video { width: 100%; height: auto; }
+
+a { text-decoration: none; color: #ff4000; position: relative; }
+a:after { content: ''; border-bottom: 1px solid #aaa; position: absolute; bottom: -0.3em; width: 100%; left: 0; opacity: 0; transition: all 0.25s linear; -moz-transition: all 0.25s linear; -webkit-transition: all 0.25s linear; -o-transition: all 0.25s linear; }
+a:hover:after { opacity: 1; bottom: -0.07em; }
+
+img { display: block; margin: 0 10px 10px 0; max-width: 100%; }
+
+a img { border: none; }
+
+i { font-style: normal; }
+b { font-weight: normal; }
+
+abbr, abbr[title], acronym { font-size: 75%; letter-spacing: 0.2em; text-transform: uppercase; border: none; }
+
+code { font: 1.4rem/1 Consolas, 'Courier New', Courier, monospace; color: #999; }
+
+sub, sup { line-height: 0; }
+
+::selection { background: #2a69c2; color: #fff; }
+::-moz-selection { background: #2a69c2; color: #fff; }
+
+
+/*-------------------------------------------    
+    Global
+-------------------------------------------*/
+ 
+/* Phark Image Replacement - http://phark.typepad.com/phark/2003/08/accessible_imag.html */
+.phark { display: block; text-indent: -9999px; background-position: 0 0; background-repeat: no-repeat; background-color: transparent; }
+
+/* Trimming Outline in Firefox - http://snook.ca/archives/html_and_css/trimming_long_o  */
+/*\*/ .phark-link { overflow: hidden; } /**/
+
+/* Easy Clearing - http://www.positioniseverything.net/easyclearing.html */ 
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.offscreen { position: absolute; left: -9999px; display: block; }
+.onscreen { left: 0; }
+
+.hide { display: none; }
+
+.no-bullets { list-style: none; }
+
+.bulleted { list-style: disc; }
+
+.uppercase { text-transform: uppercase; }
+
+.rwd-break { display: block; }
+
+
+/*-------------------------------------------    
+	Modules
+-------------------------------------------*/
+.page-header { border-top: 10px solid #000; padding: 2em 2.5% 1em; border-bottom: 1px solid #000; margin: 0 0 2em; }
+	.page-header-title { margin: 0 0 0.25em; line-height: 1; }
+	.page-header-subtitle { font-size: 1.6rem; text-transform: uppercase; letter-spacing: 0.1em; }
+
+.entry { border-bottom: 1px solid #ccc; padding: 2em 0 0; position: relative; }
+	.entry-title { font-weight: normal; font-size: 3rem; margin: 0 0 0.1em; }
+	.entry-future .entry-title { color: #9e9e9e; }
+	.entry-title:before { content: ''; display: block; width: 20px; height: 20px; border: 2px solid #000; border-radius: 20px; background: #000; position: absolute; left: -43px; top: 0.95em; }
+	.entry-future .entry-title:before { border-color: #c2c2c2; background: #fff; }
+	.entry-title:after { content: ''; display: block; position: absolute; top: 1.1em; left: -1.27em; width: 12px; height: 10px; background: transparent url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEuMzE0cHgiIGhlaWdodD0iOS4xOTJweCIgdmlld0JveD0iMCAwIDExLjMxNCA5LjE5MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTEuMzE0IDkuMTkyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iOS4xOTIsMCA0LjI0Myw0Ljk1IDIuMTIxLDIuODI4IDAsNC45NSAyLjEyMSw3LjA3MSA0LjI0Myw5LjE5MiA2LjM2NCw3LjA3MSAxMS4zMTQsMi4xMjEgIi8+DQo8L3N2Zz4NCg==) no-repeat 0 0;
+	}
+	.entry-date { font-style: italic; color: #bababa; }
+	.entry-future .entry-date { color: #ccc; }
+
+
+
+/*-------------------------------------------    
+	Page Specific
+-------------------------------------------*/
+.main { border-left: 3px solid #f1f1f1; width: 85%; margin: 0 auto; padding: 0 0 0 30px; }
+
+
+
+@media screen and (min-width: 800px) {
+
+	.wrap { width: 95%; max-width: 1100px; margin: 0 auto 0 1em; position: relative; padding: 6em 0 10em; }
+		.page-header-wrap { width: 35%; margin: 0; float: left; position: fixed; top: 0; }
+			.page-header { border-bottom: none; padding-top: 6em; }
+		.main { width: 60%; margin: 0 0 0 40%; }
+		.entry-title:after { top: 1.14em; }
+}
+
+@media screen and (min-width: 1100px) {
+	.page-header-wrap { width: 385px; }
+
+}
