@@ -15,8 +15,9 @@ var Site = function(){
 
     this.init = function(){
         
-        var _pointToScrollTo    =   $('.entry-latest').offset().top - 30,
-            _viewport           =   $('html, body');
+        var _classNameToScrollTo    =   '.entry-latest',
+            _pointToScrollTo        =   $(_classNameToScrollTo).offset().top - 30,
+            _viewport               =   $('html, body');
 
         _viewport.delay(500).animate({
             scrollTop: _pointToScrollTo
