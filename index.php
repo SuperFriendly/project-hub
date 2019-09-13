@@ -1,3 +1,25 @@
+<?php 
+    
+    function timeFromNow($milestone){
+        
+        // http://stackoverflow.com/questions/2040560/finding-the-number-of-days-between-two-dates
+        $now = time(); // or your date as well
+        //$your_date = strtotime("2010-01-01");
+        $your_date = strtotime($milestone);
+        $datediff = $now - $your_date;
+        $daysFromNow = floor($datediff/(60*60*24));
+        if ($daysFromNow < 0) {
+            if($daysFromNow == -1){
+                return ' &mdash; 1 day from now';    
+            } else {
+                return ' &mdash; ' . abs($daysFromNow) . " days from now";    
+            }
+        } else {
+            return;
+        }
+        
+    }
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -39,7 +61,7 @@
 
             <article class="entry entry-future">
                 <h1 class="entry-title">Design Round 11</h1>
-                <p class="entry-date">June 4, 2014</p>
+                <p class="entry-date">June 4, 2014<?php echo timeFromNow('2014-06-04'); ?></p>
                     
             </article><!-- .entry -->
 
@@ -47,7 +69,7 @@
 
             <article class="entry entry-future">
                 <h1 class="entry-title">Design Round 10</h1>
-                <p class="entry-date">June 4, 2014</p>
+                <p class="entry-date">June 4, 2014<?php echo timeFromNow('2014-06-04'); ?></p>
                     
             </article><!-- .entry -->
 
@@ -55,7 +77,7 @@
 
             <article class="entry entry-future">
                 <h1 class="entry-title">Design Round 9</h1>
-                <p class="entry-date">June 4, 2014</p>
+                <p class="entry-date">June 4, 2014<?php echo timeFromNow('2014-06-04'); ?></p>
                     
             </article><!-- .entry -->
 
@@ -63,7 +85,7 @@
 
             <article class="entry entry-future">
                 <h1 class="entry-title">Design Round 8</h1>
-                <p class="entry-date">June 4, 2014</p>
+                <p class="entry-date">June 4, 2014<?php echo timeFromNow('2014-06-04'); ?></p>
                     
             </article><!-- .entry -->
 
@@ -71,7 +93,7 @@
 
             <article class="entry entry-future">
                 <h1 class="entry-title">Design Round 7</h1>
-                <p class="entry-date">June 4, 2014</p>
+                <p class="entry-date">June 4, 2014<?php echo timeFromNow('2014-06-04'); ?></p>
                     
             </article><!-- .entry -->
 
@@ -79,7 +101,7 @@
 
             <article class="entry entry-future">
                 <h1 class="entry-title">Design Round 6</h1>
-                <p class="entry-date">June 4, 2014</p>
+                <p class="entry-date">June 4, 2014<?php echo timeFromNow('2014-06-04'); ?></p>
                     
             </article><!-- .entry -->
 
@@ -87,7 +109,7 @@
 
             <article class="entry entry-future">
                 <h1 class="entry-title">Design Round 5</h1>
-                <p class="entry-date">June 4, 2014</p>
+                <p class="entry-date">June 4, 2014<?php echo timeFromNow('2014-06-04'); ?></p>
                     
             </article><!-- .entry -->
 
@@ -95,7 +117,7 @@
 
             <article class="entry entry-future">
                 <h1 class="entry-title">Design Round 4</h1>
-                <p class="entry-date">June 4, 2014</p>
+                <p class="entry-date">June 4, 2014<?php echo timeFromNow('2014-06-04'); ?></p>
                     
             </article><!-- .entry -->
 
@@ -103,7 +125,7 @@
 
             <article class="entry entry-latest">
                 <h1 class="entry-title">Design Round 3</h1>
-                <p class="entry-date">June 4, 2014</p>
+                <p class="entry-date">June 4, 2014<?php echo timeFromNow('2014-06-04'); ?></p>
 
                 <p>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet.</p>
 
@@ -119,7 +141,7 @@
 
             <article class="entry">
                 <h1 class="entry-title">Design Round 2 a long title of this entry</h1>
-                <p class="entry-date">June 4, 2014</p>
+                <p class="entry-date">June 4, 2014<?php echo timeFromNow('2014-06-04'); ?></p>
 
                 <p>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet.</p>
 
@@ -135,7 +157,7 @@
 
             <article class="entry">
                 <h1 class="entry-title">Design Round 1</h1>
-                <p class="entry-date">June 4, 2014</p>
+                <p class="entry-date">June 4, 2014<?php echo timeFromNow('2014-06-04'); ?></p>
 
                 <p>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet.</p>
 
